@@ -28,18 +28,6 @@ public class StudentRestExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
 
-//    @ExceptionHandler
-//    public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exception){
-//
-//        // create a StudentErrorResponse
-//        StudentErrorResponse error = new StudentErrorResponse();
-//
-//        error.setStatus(HttpStatus.NOT_FOUND.value());
-//        error.setMessage(exception.getMessage());
-//        error.setRegistrationDate(LocalDateTime.now());
-//        return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);
-//    }
-
     @ExceptionHandler
     public ResponseEntity<StudentErrorResponse> handleException(Exception exception) {
 
